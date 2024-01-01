@@ -1,5 +1,7 @@
 //! Bubble Sort
 //! ===============================================================================================
+// * Big-O = O(n^2)
+
 function bubbleSort(arr) {
   let swapped;
   do {
@@ -15,10 +17,11 @@ function bubbleSort(arr) {
   } while (swapped);
 }
 
-// * Big-O = O(n^2)
 
 //! Insertion Sort
 //! ===============================================================================================
+// * Big-O = O(n^2)
+
 function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let numberToInsert = arr[i];
@@ -31,10 +34,11 @@ function insertionSort(arr) {
   }
 }
 
-// * Big-O = O(n^2)
 
 //! Quick Sort
 //! ===============================================================================================
+// * Big-O = O(n^2) if array is sorted already, but is usually O(nlogn)
+
 function quickSort(arr) {
   if (arr.length < 2) {
     return arr;
@@ -52,10 +56,11 @@ function quickSort(arr) {
   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
 }
 
-// * Big-O = O(n^2) if array is sorted already, but is usually O(nlogn)
 
 //! Merge Sort
 //! ===============================================================================================
+// * Big-O = O(nlogn)
+
 function mergeSort() {
   if (arr.length < 2) {
     return arr;
@@ -78,4 +83,3 @@ function merge() {
   return [...sortedArr, ...leftArr, ...rightArr];
 }
 
-// * Big-O = O(nlogn)

@@ -1,5 +1,7 @@
 //! Fibonacci Sequence
 //! ===============================================================================================
+// * Big-O = O(n) - due to the for loop
+
 function fibSeq(n) {
   const fib = [0, 1];
   for (let i = 2; i < n; i++) {
@@ -8,10 +10,11 @@ function fibSeq(n) {
   return fib;
 }
 
-// * Big-O = O(n) - due to the for loop
 
 //! Factorial of a Number
 //! ===============================================================================================
+// * Big-O = O(n) - due to the for loop
+
 function factorial(n) {
   let result = 1;
   for (let i = 2; i <= n; i++) {
@@ -20,10 +23,11 @@ function factorial(n) {
   return result;
 }
 
-// * Big-O = O(n) - due to the for loop
 
 //!Is Prime number
 //! ===============================================================================================
+// * Big-O = O(n) due to the for loop
+
 function isPrime(n) {
   if (n < 2) {
     return false;
@@ -36,10 +40,11 @@ function isPrime(n) {
   return true;
 }
 
-// * Big-O = O(n) due to the for loop
 
 //!Power of Two
 //! ===============================================================================================
+// * Big-O = O(logn) because the input is halved in the while loop
+
 function isPowerOfTwo(n) {
   if (n < 1) {
     return false;
@@ -53,10 +58,11 @@ function isPowerOfTwo(n) {
   return true;
 }
 
-// * Big-O = O(logn) because the input is halved in the while loop
 
 //! Power of Two Bitwise Ver.
 //! ===============================================================================================
+// * Big-O is O(1) or constant due to bitwise operator
+
 function isPowerOfTwoBitWise(n) {
   if (n < 1) {
     return false;
@@ -64,10 +70,11 @@ function isPowerOfTwoBitWise(n) {
   return (n & (n - 1)) === 0;
 }
 
-// * Big-O is O(1) or constant due to bitwise operator
 
 //! Recursive Fibonacci Sequence
 //! ===============================================================================================
+// * Big-O is O(2^n)
+
 function recursiveFibSeq(n) {
   if (n < 2) {
     return n;
@@ -75,10 +82,11 @@ function recursiveFibSeq(n) {
   return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2);
 }
 
-// * Big-O is O(2^n)
 
 //! Recursive Factorial
 //! ===============================================================================================
+// * Big-O is O(n)
+
 function recursiveFactorial(n) {
   if (n === 0) {
     return 1;
@@ -86,4 +94,3 @@ function recursiveFactorial(n) {
   return n * recursiveFactorial(n - 1);
 }
 
-// * Big-O is O(n)

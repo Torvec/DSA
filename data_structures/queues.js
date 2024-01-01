@@ -1,6 +1,7 @@
 //! Queue
 //! ===============================================================================================
 // First In First Out (FIFO)
+
 class Queue {
   constructor() {
     this.items = [];
@@ -38,8 +39,10 @@ queue.print(); // 10, 20, 30
 console.log(queue.dequeue()); // 10 (was removed from front)
 console.log(queue.peek()); // 20 (shows 20 because 10 was removed)
 
+
 //! Optimized Queue
 //! ===============================================================================================
+
 class QueueOpt {
   constructor() {
     this.items = {};
@@ -70,9 +73,11 @@ class QueueOpt {
   }
 }
 
+
 //! Priority Queue
 //! ===============================================================================================
 // TODO: Further Learning
+
 
 const queueOpt = new Queue();
 console.log(queueOpt.isEmpty()); // true
@@ -83,6 +88,7 @@ console.log(queueOpt.size()); // 3
 queueOpt.print(); // {'0': 10, '1': 20, '2': 30}
 console.log(queueOpt.dequeue()); // 10 (was removed from front)
 console.log(queueOpt.peek()); // 20 (shows 20 because 10 was removed)
+
 
 //! Circular Queue
 //! ===============================================================================================
@@ -161,37 +167,3 @@ circularQueue.enqueue(60);
 // 20 30 40 50 60 - 60 is technically at the 0 position in the queue but it was added in last and the front pointer is at position 1
 circularQueue.print();
 
-//! Queue using a linked list
-//! ===============================================================================================
-class LinkedListQueue {
-  constructor() {
-    this.list = new LinkedListTail();
-  }
-  enqueue(value) {
-    this.list.append(value);
-  }
-  dequeue() {
-    return this.list.removeFromFront();
-  }
-  peek() {
-    return this.list.head.value;
-  }
-  isEmpty() {
-    return this.list.isEmpty();
-  }
-  getSize() {
-    return this.list.getSize();
-  }
-  print() {
-    return this.list.print();
-  }
-}
-const queueList = LinkedListQueue();
-console.log(queueList.isEmpty()); // True
-queueList.enqueue(20);
-queueList.enqueue(10);
-queueList.enqueue(30);
-console.log(queueList.getSize()); // 3
-queueList.print(); // 30 10 20
-console.log(queueList.dequeue()); // 30 is removed from the front of the queue
-console.log(queueList.peek()); // 10 is at the front now

@@ -1,5 +1,6 @@
 //! Hash Table/Hash Map
 //! ===============================================================================================
+
 class HashTable {
   constructor(size) {
     this.table = new Array(size);

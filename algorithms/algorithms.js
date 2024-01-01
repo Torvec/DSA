@@ -1,5 +1,7 @@
 //! Cartesian Product
 //! ===============================================================================================
+// * Big-O = O(mn)
+
 function cartesianProduct(arrA, arrB) {
   const resultArr = [];
   for (let i = 0; i < arrA.length; i++) {
@@ -10,10 +12,11 @@ function cartesianProduct(arrA, arrB) {
   return resultArr;
 }
 
-// * Big-O = O(mn)
 
 //! Climbing Staircase
 //! ===============================================================================================
+// * Big-O = O(n)
+
 function climbingStaircase(n) {
   const numberOfWays = [1, 2];
   for (let i = 2; i <= n; i++) {
@@ -22,10 +25,11 @@ function climbingStaircase(n) {
   return numberOfWays[n - 1];
 }
 
-// * Big-O = O(n)
 
 //! Tower of Hanoi
 //! ===============================================================================================
+// * Big-O = O(2^n)
+
 function towerOfHanoi(n, fromRod, toRod, usingRod) {
   if (n === 1) {
     console.log(`Move disc 1 from ${fromRod} to ${toRod}.`);
@@ -38,4 +42,3 @@ function towerOfHanoi(n, fromRod, toRod, usingRod) {
 
 towerOfHanoi(3, "A", "B", "C");
 
-// * Big-O = O(2^n)

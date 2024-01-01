@@ -1,5 +1,7 @@
 //! Linear Search
 //! ===============================================================================================
+// * Big-O is O(n)
+
 function linearSearch(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     if (target === arr[i]) {
@@ -9,10 +11,11 @@ function linearSearch(arr, target) {
   return -1;
 }
 
-// * Big-O is O(n)
 
 //! Binary Search
 //! ===============================================================================================
+// * Big-O = O(logn)
+
 function binarySearch(arr, target) {
   let leftIndex = 0;
   let rightIndex = arr.length - 1;
@@ -30,10 +33,11 @@ function binarySearch(arr, target) {
   return -1;
 }
 
-// * Big-O = O(logn)
 
 //! Recursive Binary Search
 //! ===============================================================================================
+// * Big-O = O(logn)
+
 function recursiveBinarySearch(arr, target) {
   return search(arr, target, 0, arr.length - 1);
 }
@@ -50,4 +54,3 @@ function search(arr, target, leftIndex, rightIndex) {
   }
 }
 
-// * Big-O = O(logn)

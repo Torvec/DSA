@@ -1,5 +1,6 @@
 //! Linked List
 //! ===============================================================================================
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -181,6 +182,7 @@ list.print(); // 60 50 15 20
 
 //! Linked List with Tail
 //! ===============================================================================================
+
 class NodeTail {
   constructor(value) {
     this.value = value;
@@ -282,10 +284,87 @@ listTail.print(); // 10 20 30
 listTail.removeFromEnd();
 listTail.print(); // 10 20
 
+
+//! Stack using a linked list
+//! ===============================================================================================
+
+class LinkedListStack {
+  constructor() {
+    this.list = new LinkedListTail();
+  }
+  push(value) {
+    this.list.prepend(value);
+  }
+  pop() {
+    return this.list.removeFromFront();
+  }
+  peek() {
+    return this.list.head.value;
+  }
+  isEmpty() {
+    return this.list.isEmpty();
+  }
+  getSize() {
+    return this.list.getSize();
+  }
+  print() {
+    return this.list.print();
+  }
+}
+const stackList = new LinkedListStack();
+console.log(stackList.isEmpty()); // True
+stackList.push(20);
+stackList.push(10);
+stackList.push(30);
+console.log(stackList.getSize()); // 3
+stackList.print(); // 30 10 20
+console.log(stackList.pop()); // 30 is removed from the 'top' of the stack
+console.log(stackList.peek()); // 10 is at the top now
+
+
+//! Queue using a linked list
+//! ===============================================================================================
+class LinkedListQueue {
+  constructor() {
+    this.list = new LinkedListTail();
+  }
+  enqueue(value) {
+    this.list.append(value);
+  }
+  dequeue() {
+    return this.list.removeFromFront();
+  }
+  peek() {
+    return this.list.head.value;
+  }
+  isEmpty() {
+    return this.list.isEmpty();
+  }
+  getSize() {
+    return this.list.getSize();
+  }
+  print() {
+    return this.list.print();
+  }
+}
+
+const queueList = LinkedListQueue();
+console.log(queueList.isEmpty()); // True
+queueList.enqueue(20);
+queueList.enqueue(10);
+queueList.enqueue(30);
+console.log(queueList.getSize()); // 3
+queueList.print(); // 30 10 20
+console.log(queueList.dequeue()); // 30 is removed from the front of the queue
+console.log(queueList.peek()); // 10 is at the front now
+
+
 //! Double Linked List
 //! ===============================================================================================
 // TODO: Figure this out on my own i guess
 
+
 //! Circular Linked List
 //! ===============================================================================================
 // TODO: Figure this one out too
+
